@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  
+  root 'application#index'
+  # allows you to refresh the page on routes and not have Rails 
+  # confuse a client side refresh with a request to a resource
+  get '*path' => 'application#index'
+ 
+  
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
